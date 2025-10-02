@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html leng="en">
     <head>
+        {% block head %}
         <title>strona html</title>
         <meta charset="utf-8">
         <meta name="'descripcion" content="moja pierwsza strona"> <!--ulatwi to odczyt bota ktore pozycjonuja strony itp-->
         <meta name="keyword" content="o mnie"> <!--slowa kluczowe do pozycjonowania-->
         <meta name="author" content="Amelka">
         <link rel="stylesheet" href="style_main.css">
+        {% endblock %}
     </head>
     <body>
         <h1><strong>Witaj w moim świecie!</strong></h1>
@@ -14,6 +16,6 @@
         <h2>O mnie!</h2>
         <p><b>imie:</b> Amelka</p>
         <p><b>nazwisko:</b> Druzba</p>
-        <p><a href="podstrona.html">kontakt</a></p>
+        <p><a href="{{ url_for('kontakt') }}">Kontakt</a></p>
     </body>
 </html>

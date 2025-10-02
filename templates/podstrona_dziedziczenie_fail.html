@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+
+{% block head %}
+{% endblock %}
+{% block body %}
+    <h1>Witaj w moim świecie!</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Giraffe_standing.jpg" alt="żyrafa">
+    <h2>Kontakt</h2>
+    <ul>
+        <li>email: amelka@gmail.com</li>
+        <li>telefon: 888 777 222</li>
+    </ul>
+    <form action="{{ url_for('main') }}" method="POST">
+        <label for="message">Twoja wiadomość:</label><br>
+        <textarea id="message" name="message" rows="4" cols="40" placeholder="Napisz coś..."></textarea><br><br>
+        <button type="submit">Wyślij</button>
+    </form>
+{% endblock %}
