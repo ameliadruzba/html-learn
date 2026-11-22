@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html leng="en">
+<html lang="en">
     <head>
-        {% block head %}
-        <title>strona html</title>
-        <meta charset="utf-8">
-        <meta name="'descripcion" content="moja pierwsza strona"> <!--ulatwi to odczyt bota ktore pozycjonuja strony itp-->
-        <meta name="keyword" content="o mnie"> <!--slowa kluczowe do pozycjonowania-->
-        <meta name="author" content="Amelka">
-        <link rel="stylesheet" href="style_main.css">
-        {% endblock %}
+    <title>strona html</title>
+    <meta charset="utf-8">
+    <meta name="description" content="moja pierwsza strona">
+    <meta name="keywords" content="o mnie">
+    <meta name="author" content="Amelka">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_main.css') }}">
+
     </head>
     <body>
         <h1><strong>Witaj w moim świecie!</strong></h1>
